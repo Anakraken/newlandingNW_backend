@@ -5,7 +5,7 @@ const router = Router();
 
 router.post('/send-sms', async (req, res) => {
   try {
-    // console.log("Conected!", req.body)
+    console.log("Conected!", req.body.code, req.body.phone)
     await sendmessage(req.body.code, req.body.phone);
   } catch (error) {
     if (error && error.statusCode) {

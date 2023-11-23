@@ -4,7 +4,7 @@ import { connectDB } from './db.js';
 
 //Settings
 connectDB();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 //Start Port
 app.listen(port);
