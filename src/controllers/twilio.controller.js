@@ -1,7 +1,13 @@
+import dotenv from 'dotenv';
+import path from 'path';
+import { __dirname } from '../../env_path.js';
 import Twilio from 'twilio';
+
+dotenv.config({ path: path.resolve(__dirname + '/.env') });
 
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
+
 const client = Twilio(accountSid, authToken);
 
 export async function sendmessage(code, phone) {
