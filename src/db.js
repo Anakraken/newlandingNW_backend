@@ -1,8 +1,11 @@
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
 import path from 'path';
 import { __dirname } from '../env_path.js';
-dotenv.config({ path: path.resolve(__dirname + '/.env') });
+import mongoose from 'mongoose';
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({ path: path.resolve(__dirname + '/.env') });
+}
 
 const url = process.env.MONGODB;
 
