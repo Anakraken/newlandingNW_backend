@@ -2,12 +2,13 @@
 node_modules/
 package-lock.json
 
+# Archivos de configuración locales
+.env
+
 # Archivos de construcción
 build/
 dist/
 
-# Archivos de configuración locales
-.env
 
 # Logs y archivos temporales
 logs/
